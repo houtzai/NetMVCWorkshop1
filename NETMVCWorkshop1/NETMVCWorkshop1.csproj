@@ -107,20 +107,27 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <EntityDeploy Include="Models\BookManagement.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BookManagement.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BookManagement.edmx.diagram">
+      <DependentUpon>BookManagement.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Models\BookManagement.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BookManagement.Context.cs</LastGenOutput>
       <DependentUpon>BookManagement.edmx</DependentUpon>
+      <LastGenOutput>BookManagement.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\BookManagement.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BookManagement.edmx</DependentUpon>
       <LastGenOutput>BookManagement.cs</LastGenOutput>
     </Content>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -174,13 +181,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <EntityDeploy Include="Models\BookManagement.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BookManagement.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\BookManagement.edmx.diagram">
-      <DependentUpon>BookManagement.edmx</DependentUpon>
-    </Content>
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

@@ -12,6 +12,7 @@ namespace NETMVCWorkshop1.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class BOOK_DATA
     {
@@ -23,6 +24,7 @@ namespace NETMVCWorkshop1.Models
         [DisplayName("作者")]
         public string BOOK_AUTHOR { get; set; }
         [DisplayName("購書日期")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy/MM/dd}")]
         public Nullable<System.DateTime> BOOK_BOUGHT_DATE { get; set; }
         [DisplayName("出版商")]
         public string BOOK_PUBLISHER { get; set; }

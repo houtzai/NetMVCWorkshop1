@@ -11,9 +11,9 @@
           </Key>
           <Property Name="BOOK_CLASS_ID" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="BOOK_CLASS_NAME" Type="nvarchar" MaxLength="120" Nullable="false" />
-          <Property Name="CREATE_DATE" Type="datetime" />
+          <Property Name="CREATE_DATE" Type="date" />
           <Property Name="CREATE_USER" Type="nvarchar" MaxLength="24" />
-          <Property Name="MODIFY_DATE" Type="datetime" />
+          <Property Name="MODIFY_DATE" Type="date" />
           <Property Name="MODIFY_USER" Type="nvarchar" MaxLength="24" />
         </EntityType>
         <EntityType Name="BOOK_CODE">
@@ -24,9 +24,9 @@
           <Property Name="CODE_TYPE" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="CODE_TYPE_DESC" Type="nvarchar" MaxLength="400" />
           <Property Name="CODE_NAME" Type="nvarchar" MaxLength="400" />
-          <Property Name="CREATE_DATE" Type="datetime" />
+          <Property Name="CREATE_DATE" Type="date" />
           <Property Name="CREATE_USER" Type="nvarchar" MaxLength="20" />
-          <Property Name="MODIFY_DATE" Type="datetime" />
+          <Property Name="MODIFY_DATE" Type="date" />
           <Property Name="MODIFY_USER" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="BOOK_DATA">
@@ -37,14 +37,14 @@
           <Property Name="BOOK_NAME" Type="nvarchar" MaxLength="400" Nullable="false" />
           <Property Name="BOOK_CLASS_ID" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="BOOK_AUTHOR" Type="nvarchar" MaxLength="60" />
-          <Property Name="BOOK_BOUGHT_DATE" Type="datetime" />
+          <Property Name="BOOK_BOUGHT_DATE" Type="date" />
           <Property Name="BOOK_PUBLISHER" Type="nvarchar" MaxLength="40" />
           <Property Name="BOOK_NOTE" Type="nvarchar" MaxLength="2400" />
           <Property Name="BOOK_STATUS" Type="char" MaxLength="1" Nullable="false" />
           <Property Name="BOOK_KEEPER" Type="nvarchar" MaxLength="24" />
-          <Property Name="CREATE_DATE" Type="datetime" />
+          <Property Name="CREATE_DATE" Type="date" />
           <Property Name="CREATE_USER" Type="nvarchar" MaxLength="24" />
-          <Property Name="MODIFY_DATE" Type="datetime" />
+          <Property Name="MODIFY_DATE" Type="date" />
           <Property Name="MODIFY_USER" Type="nvarchar" MaxLength="24" />
         </EntityType>
         <EntityType Name="MEMBER_M">
@@ -54,9 +54,9 @@
           <Property Name="USER_ID" Type="nvarchar" MaxLength="24" Nullable="false" />
           <Property Name="USER_CNAME" Type="nvarchar" MaxLength="100" />
           <Property Name="USER_ENAME" Type="nvarchar" MaxLength="100" />
-          <Property Name="CREATE_DATE" Type="datetime" />
+          <Property Name="CREATE_DATE" Type="date" />
           <Property Name="CREATE_USER" Type="nvarchar" MaxLength="24" />
-          <Property Name="MODIFY_DATE" Type="datetime" />
+          <Property Name="MODIFY_DATE" Type="date" />
           <Property Name="MODIFY_USER" Type="nvarchar" MaxLength="24" />
         </EntityType>
         <EntityContainer Name="BookManagementModelStoreContainer">
@@ -76,9 +76,9 @@
           </Key>
           <Property Name="BOOK_CLASS_ID" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="BOOK_CLASS_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="0" />
           <Property Name="CREATE_USER" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
-          <Property Name="MODIFY_DATE" Type="DateTime" Precision="3" />
+          <Property Name="MODIFY_DATE" Type="DateTime" Precision="0" />
           <Property Name="MODIFY_USER" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="BOOK_CODE">
@@ -89,9 +89,9 @@
           <Property Name="CODE_TYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CODE_TYPE_DESC" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
           <Property Name="CODE_NAME" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
-          <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="0" />
           <Property Name="CREATE_USER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MODIFY_DATE" Type="DateTime" Precision="3" />
+          <Property Name="MODIFY_DATE" Type="DateTime" Precision="0" />
           <Property Name="MODIFY_USER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="BOOK_DATA">
@@ -102,14 +102,14 @@
           <Property Name="BOOK_NAME" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="BOOK_CLASS_ID" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="BOOK_AUTHOR" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <Property Name="BOOK_BOUGHT_DATE" Type="DateTime" Precision="3" />
+          <Property Name="BOOK_BOUGHT_DATE" Type="DateTime" Precision="0" />
           <Property Name="BOOK_PUBLISHER" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="BOOK_NOTE" Type="String" MaxLength="2400" FixedLength="false" Unicode="true" />
           <Property Name="BOOK_STATUS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="BOOK_KEEPER" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
-          <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="0" />
           <Property Name="CREATE_USER" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
-          <Property Name="MODIFY_DATE" Type="DateTime" Precision="3" />
+          <Property Name="MODIFY_DATE" Type="DateTime" Precision="0" />
           <Property Name="MODIFY_USER" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="MEMBER_M">
@@ -119,12 +119,12 @@
           <Property Name="USER_ID" Type="String" MaxLength="24" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="USER_CNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="USER_ENAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="0" />
           <Property Name="CREATE_USER" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
-          <Property Name="MODIFY_DATE" Type="DateTime" Precision="3" />
+          <Property Name="MODIFY_DATE" Type="DateTime" Precision="0" />
           <Property Name="MODIFY_USER" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="BookManagementEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BooksManagementEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BOOK_CLASS" EntityType="Self.BOOK_CLASS" />
           <EntitySet Name="BOOK_CODE" EntityType="Self.BOOK_CODE" />
           <EntitySet Name="BOOK_DATA" EntityType="Self.BOOK_DATA" />
@@ -135,7 +135,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BookManagementModelStoreContainer" CdmEntityContainer="BookManagementEntities">
+        <EntityContainerMapping StorageEntityContainer="BookManagementModelStoreContainer" CdmEntityContainer="BooksManagementEntities">
           <EntitySetMapping Name="BOOK_CLASS">
             <EntityTypeMapping TypeName="BookManagementModel.BOOK_CLASS">
               <MappingFragment StoreEntitySet="BOOK_CLASS">

@@ -13,7 +13,7 @@ namespace NETMVCWorkshop1.Controllers
         {
             List<Models.BOOK_DATA> l_result = new List<Models.BOOK_DATA>();
             ViewBag.ResultMessage = TempData["ResultMessage"];
-            using (Models.BookManagementEntities db = new Models.BookManagementEntities())
+            using (Models.BooksManagementEntities db = new Models.BooksManagementEntities())
             {
                 l_result = (from m in db.BOOK_DATA select m).ToList();
                 return View(l_result);
@@ -31,7 +31,7 @@ namespace NETMVCWorkshop1.Controllers
         {
             if (this.ModelState.IsValid)
             {
-                using (Models.BookManagementEntities db = new Models.BookManagementEntities())
+                using (Models.BooksManagementEntities db = new Models.BooksManagementEntities())
                 {
                     b_data.BOOK_STATUS = "v";
                     db.BOOK_DATA.Add(b_data);
@@ -50,7 +50,7 @@ namespace NETMVCWorkshop1.Controllers
         public ActionResult Edit(int? b_id)
         {
 
-            using (Models.BookManagementEntities db = new Models.BookManagementEntities())
+            using (Models.BooksManagementEntities db = new Models.BooksManagementEntities())
             {
                 var l_result = (from m in db.BOOK_DATA where m.BOOK_ID == b_id select m).FirstOrDefault();
                 if (l_result != default(Models.BOOK_DATA))
@@ -71,7 +71,7 @@ namespace NETMVCWorkshop1.Controllers
         {
             if (this.ModelState.IsValid)
             {
-                using (Models.BookManagementEntities db = new Models.BookManagementEntities())
+                using (Models.BooksManagementEntities db = new Models.BooksManagementEntities())
                 {
                     var l_result = (from m in db.BOOK_DATA where m.BOOK_ID == b_data.BOOK_ID select m).FirstOrDefault();
                     l_result.BOOK_NAME = b_data.BOOK_NAME;
@@ -97,7 +97,7 @@ namespace NETMVCWorkshop1.Controllers
         public ActionResult Delete(int? b_id)
         {
 
-            using (Models.BookManagementEntities db = new Models.BookManagementEntities())
+            using (Models.BooksManagementEntities db = new Models.BooksManagementEntities())
             {
                 var l_result = (from m in db.BOOK_DATA where m.BOOK_ID == b_id select m).FirstOrDefault();
                 if (l_result != default(Models.BOOK_DATA))
@@ -117,7 +117,7 @@ namespace NETMVCWorkshop1.Controllers
         public ActionResult Details(int? b_id)
         {
 
-            using (Models.BookManagementEntities db = new Models.BookManagementEntities())
+            using (Models.BooksManagementEntities db = new Models.BooksManagementEntities())
             {
                 var l_result = (from m in db.BOOK_DATA where m.BOOK_ID == b_id select m).FirstOrDefault();
                 if (l_result != default(Models.BOOK_DATA))

@@ -13,10 +13,10 @@ namespace NETMVCWorkshop1.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BookManagementEntities : DbContext
+    public partial class BooksManagementEntities : DbContext
     {
-        public BookManagementEntities()
-            : base("name=BookManagementEntities")
+        public BooksManagementEntities()
+            : base("name=BooksManagementEntities")
         {
         }
     
