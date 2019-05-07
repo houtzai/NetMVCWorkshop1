@@ -46,6 +46,7 @@ namespace NETMVCWorkshop1.Controllers
             return RedirectToAction("Index");
         }
 
+
         public ActionResult Edit(int? b_id)
         {
 
@@ -92,8 +93,7 @@ namespace NETMVCWorkshop1.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+
         public ActionResult Delete(int? b_id)
         {
 
@@ -111,6 +111,24 @@ namespace NETMVCWorkshop1.Controllers
                     TempData["ResultMessage"] = string.Format("資料有誤,請檢查");
                 }
                 return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult Details(int? b_id)
+        {
+
+            using (Models.BookManagementEntities db = new Models.BookManagementEntities())
+            {
+                var l_result = (from m in db.BOOK_DATA where m.BOOK_ID == b_id select m).FirstOrDefault();
+                if (l_result != default(Models.BOOK_DATA))
+                {
+                    return View(l_result);
+                }
+                else
+                {
+                    TempData["ResultMessage"] = string.Format("資料有誤,請檢查");
+                    return RedirectToAction("Index");
+                }
             }
         }
     }

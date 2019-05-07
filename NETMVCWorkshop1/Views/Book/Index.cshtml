@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>圖書查詢</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("新增", "Create")
 </p>
 <table class="table">
     <tr>
@@ -47,13 +47,9 @@
             @Html.DisplayFor(modelItem => item.BOOK_KEEPER)
         </td>
         <td>
-            @Html.ActionLink("編輯", "Edit", new { b_id = item.BOOK_ID })
-            @using (Html.BeginForm("Delete", "Book", FormMethod.Post, new { @class = "Delete" }))
-            {
-                @Html.AntiForgeryToken();
-                @Html.Hidden("b_id", item.BOOK_ID);
-                <input type="submit" value="刪除" class="btn btn-default">
-            }
+            @Html.ActionLink("修改", "Edit", new { b_id = item.BOOK_ID })
+            @Html.ActionLink("明細", "Details", new { b_id = item.BOOK_ID })
+            @Html.ActionLink("刪除", "Delete", new { b_id = item.BOOK_ID })
         </td>
     </tr>
 }

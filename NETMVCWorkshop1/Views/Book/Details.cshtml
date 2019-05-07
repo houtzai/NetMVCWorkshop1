@@ -1,0 +1,95 @@
+﻿@model NETMVCWorkshop1.Models.BOOK_DATA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>圖書明細</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BOOK_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOOK_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BOOK_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOOK_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BOOK_CLASS_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOOK_CLASS_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BOOK_AUTHOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOOK_AUTHOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BOOK_BOUGHT_DATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOOK_BOUGHT_DATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BOOK_PUBLISHER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOOK_PUBLISHER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BOOK_NOTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOOK_NOTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BOOK_KEEPER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOOK_KEEPER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BOOK_STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOOK_STATUS)
+        </dd>
+
+        <dt>
+            @Html.ActionLink("修改", "Edit", new { b_id = @Html.DisplayFor(model => model.BOOK_ID) })
+        </dt>
+
+        <dt>
+            @Html.ActionLink("刪除", "Delete", new { b_id = @Html.DisplayFor(model => model.BOOK_ID) })
+        </dt>
+
+    </dl><br>
+    @Html.ActionLink("Back to List", "Index")
+
+</div>
